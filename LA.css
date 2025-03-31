@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0d1b2a, #1b263b, #415a77);
+    color: white;
+    font-family: "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: auto; /* Allows scrolling when needed */
+}
+
+/* Clouds (Aligned in one row at the top) */
+.cloud-container {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    z-index: -2;
+}
+
+.cloud {
+    position: relative;
+    background: rgba(50, 50, 50, 0.8);
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+    filter: blur(25px);
+    opacity: 0.85;
+    animation: moveClouds 15s linear infinite alternate;
+    left: 40px;
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+/* Rain Effect */
+.rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.rain-drop {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: rgba(173, 216, 230, 0.8);
+    filter: blur(1px);
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Poem Wrapper (Centers and allows scrolling if needed) */
+.poem-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.poem-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    font-size: 22px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    max-height: 200vh;
+   
+}
+
+/* Brighter Clickable Light Rays */
+.light-rays {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 390px;
+    height: 300px;
+    background: radial-gradient(rgba(255, 255, 200, 0.7), rgba(255, 255, 150, 0.3), transparent);
+    filter: blur(30px);
+    z-index: 1;
+    opacity: 0.9;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.light-rays:hover {
+    opacity: 1;
+}
+.title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  font-weight: bold;
+  color: gold;
+  cursor: pointer;
+  text-shadow: 2px 2px 10px rgba(255, 255, 0, 0.8);
+}

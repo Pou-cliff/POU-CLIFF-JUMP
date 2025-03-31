@@ -1,0 +1,89 @@
+body {
+    background-image: url('18.png');
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: auto;
+    height: auto;
+    width: 80%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.white-box {
+    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+    width: 63%;  /* Adjust width */
+    margin: 30px; /* Center it */
+    height: 120%;
+    padding: 20px; /* Space inside */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    left: -7%;
+    top: -7px;
+    line-height: 1.5;
+    opacity: 80%;
+}
+
+.letter {
+    margin: 0 auto;
+    text-indent: 40px;
+    text-align: justify;
+}
+
+.white-box p {
+    text-indent: 40px; /* Indents each paragraph */
+    text-align: justify; /* Justifies text */
+    margin-bottom: 10px; /* Adds spacing between paragraphs */
+}
+
+.white-box p.no-indent {
+    text-indent: 0px; /* First and last lines are NOT indented */
+    font-weight: bold; /* Optional: Makes them stand out */
+}
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: hsl(calc(360 * var(--hue)), 100%, 50%);
+    opacity: 0.8;
+    animation: fall linear infinite;
+    --hue: calc(100 * var(--random));
+    transform: rotate(var(--angle));
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+
+.confetti-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 30px; /* Adjust size as needed */
+    bottom: -43%;
+    left: 80px;
+    display: block;
+    margin: 10px auto; /* Centers the button */
+    position: absolute;
+    
+}
+
+.confetti-button img {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+}

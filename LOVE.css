@@ -1,0 +1,128 @@
+body {
+    background-color:white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* Shows the full image without cropping */
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wu{
+    z-index: -100;
+    position: fixed;
+    object-fit: cover;
+    height: 98vh;
+    width: 60vw; /* Make it cover the entire viewport */
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%); /* Center the image */
+    padding: 0%;
+    margin: 0%;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+}
+
+.heart{
+    position: fixed;
+    height: 170px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    animation: heart 4s linear infinite;
+    z-index: 100;
+}
+
+.heart:before,
+.heart:after{
+    content:"";
+    position: absolute;
+    height: 160px;
+    width: 100px;
+    background-color: #FFD700;
+    border-radius: 50px 50px 0 0;
+    animation: heart_color 5s linear infinite;
+}
+
+.heart:before{
+    left: 100px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+.heart:after{
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+@keyframes heart{
+25%{
+    transform: scale(1.3);
+}
+50%{
+    transform: scale(1.2);
+}
+75%{
+    transform: scale(1.3);
+}
+100%{
+    transform: scale(1.2);
+}
+}
+
+@keyframes heart_color{
+    25%{
+        background-color:  #87CEEB;
+    }
+    50%{
+        background-color: #242491;
+    }
+    75%{
+        background-color:  #8A2BE2;
+    }
+    100%{
+        background-color:  white;
+    }
+}
+
+#heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.puso {
+    position: absolute;
+    font-size: 20px;
+    color: red;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+}

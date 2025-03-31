@@ -1,0 +1,71 @@
+body {
+    background-image: url('SMI.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: relative;
+    height: 90vh;
+    width: 100vh;
+}
+
+.white-box {
+    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+    width: 100%;  /* Adjust width */
+    margin: 30px; /* Center it */
+    height: 470%;
+    padding: 20px; /* Space inside */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    left: 20%;
+    top: -7px;
+    line-height: 1.5;
+    opacity: 80%;
+    transform: translateX(50%);
+}
+
+.letter {
+    margin: 0 auto;
+    text-indent: 40px;
+    text-align: justify;
+}
+
+.white-box p {
+    text-indent: 40px; /* Indents each paragraph */
+    text-align: justify; /* Justifies text */
+    margin-bottom: 10px; /* Adds spacing between paragraphs */
+}
+
+.white-box p.no-indent {
+    text-indent: 0px; /* First and last lines are NOT indented */
+    font-weight: bold; /* Optional: Makes them stand out */
+}
+
+.cen{
+    position: absolute;  /* Keeps the image fixed at the bottom */
+    bottom: -382%; /*istance from bottom */
+    left: 53%;        /* Moves it to the center */
+    transform: translateX(-50%); /* Ensures perfect centering */
+    width: 620px;      /* Maintains original aspect ratio */
+    max-width: 700px; /* Adjust size as needed */
+    z-index: 9999;    /* Keeps it above other elements */
+    height: 580px;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: hsl(calc(360 * var(--hue)), 100%, 50%);
+    opacity: 0.8;
+    animation: fall linear infinite;
+    --hue: calc(100 * var(--random));
+    transform: rotate(var(--angle));
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
