@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (heartElement) {
         heartElement.addEventListener("click", function(event) {
             event.preventDefault();
-            window.location.href = "JAJA.html"; // Redirect to home page
+            window.location.href = "index.html"; // Redirect to home page
         });
     } else {
         console.error("Element with class 'heart' not found.");
