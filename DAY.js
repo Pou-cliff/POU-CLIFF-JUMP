@@ -33,5 +33,5 @@ window.addEventListener("load", function() {
 
 // Function to go back home when the button is clicked
 function goHome() {
-    window.location.href = "JAJA.html"; // Change this to your homepage link
+    window.location.href = "index.html"; // Change this to your homepage link
 }
