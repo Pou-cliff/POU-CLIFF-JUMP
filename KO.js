@@ -88,7 +88,7 @@ function typeWriter() {
 
 // Function to redirect to home page when clicking light rays
 function goHome() {
-    window.location.href = "JAJA.html"; // Change this to your actual home page
+    window.location.href = "index.html"; // Change this to your actual home page
 }
 
 // Start effects when page loads
