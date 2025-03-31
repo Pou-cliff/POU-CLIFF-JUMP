@@ -13,7 +13,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
     width: 63%;  /* Adjust width */
     margin: 30px; /* Center it */
-    height: 120%;
+    height: 500%;
     padding: 20px; /* Space inside */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
