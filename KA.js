@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Redirect after animation completes
         setTimeout(() => {
-            window.location.href = "JAJA.html"; // Update with actual home page
+            window.location.href = "index.html"; // Update with actual home page
         }, spans.length * 150);
     });
 });
